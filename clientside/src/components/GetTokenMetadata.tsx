@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Metaplex } from "@metaplex-foundation/js";
 import { Connection, PublicKey } from "@solana/web3.js";
 import { ENV, TokenListProvider } from "@solana/spl-token-registry";
+import Image from 'next/image';
 
 const GetTokenMetadata = () => {
 
@@ -124,7 +125,7 @@ const GetTokenMetadata = () => {
             </p>
 
             
-            {imageAvailable ? (<p><img src={tokenImage} alt='' className='w-[150px] h-[150px] rounded-full object-cover mx-auto' /></p>): (<button className='bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300' onClick={() => fetchLogo()}>Fetch Logo Again</button>)}
+            {imageAvailable ? (<p><Image src={tokenImage} alt='image' className='w-[150px] h-[150px] rounded-full object-cover mx-auto' /></p>): (<button className='bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300' onClick={() => fetchLogo()}>Fetch Logo Again</button>)}
         </div>
         )}
 
