@@ -28,7 +28,9 @@ export const CreateToken: FC = () => {
 
     const [toShowTokenResult, setToShowTokenResult] = useState<boolean>(false);
 
-    const amount = 100;
+    const [amount, setAmount] = useState<number>();
+
+    // const amount = 100;
 
     const onClick = useCallback(async (data) => {
         if (!publicKey) {
@@ -156,6 +158,13 @@ export const CreateToken: FC = () => {
                         placeholder='URI'
                         className='border text-black border-gray-300 p-2 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-blue-500'
                         onChange={(e) => setMetadata(e.target.value)}
+                    />
+
+                    <input 
+                        type='text'
+                        placeholder='No. to Token to mint'
+                        className='border text-black border-gray-300 p-2 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                        onChange={(e) => setAmount(Number(e.target.value))}
                     />
 
                     <input 

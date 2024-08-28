@@ -40,6 +40,12 @@ const GetTokenMetadata = () => {
               tokenName = token.name;
               tokenSymbol = token.symbol;
               tokenURI = token.uri;
+
+              setTokenName(tokenName)
+              setTokenSymbol(tokenSymbol)
+              setMetaURI(tokenURI)
+              setDataAvailable(true);
+      
         }
         else {
             const provider = await new TokenListProvider().resolve();
@@ -52,19 +58,15 @@ const GetTokenMetadata = () => {
     
             const token = tokenMap.get(mintAddress.toBase58());
     
-            tokenName = token.name;
-            tokenSymbol = token.symbol;
-            tokenURI = token.uri;
+            // tokenName = token.name;
+            // tokenSymbol = token.symbol;
+            // tokenURI = token.uri;
         }
 
         console.log(tokenName)
         console.log(tokenSymbol)
         console.log(tokenURI)
 
-        setTokenName(tokenName)
-        setTokenSymbol(tokenSymbol)
-        setMetaURI(tokenURI)
-        setDataAvailable(true);
 
         
     }

@@ -13,7 +13,7 @@ const CreateTokenPage: FC = () => {
         <Navbar />
 
             <div className='flex justify-between items-center p-4'>
-                <button
+                <button 
                 className='mt-6 text-white font-extrabold bg-purple-700 hover:bg-purple-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-purple- dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
                 onClick={() => router.push('/tokendata')}
                 >
